@@ -9,15 +9,18 @@ Source0:	http://www.jabberstudio.org/files/pyxmpp/pyxmpp-%{version}.tar.gz
 # Source0-md5:	2976f67e7f6feb0c95dc597add56f5c4
 Patch0:		pyxmpp-invalid-domain.patch
 URL:		http://pyxmpp.jabberstudio.org/
+BuildRequires:	libxml2-devel >= 2.6.0
 BuildRequires:	python-devel >= 2.2.1
 BuildRequires:	rpm-pythonprov
-BuildRequires:	libxml2-devel >= 2.6.0
 %pyrequires_eq	python-modules
 Requires:	python-libxml2 >= 2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This package provides a Python inteface to XMPP and Jabber protocols.
+
+%description -l pl
+Ten pakiet udostêpnia interfejs Pythona do protoko³ów XMPP i Jabber.
 
 %prep
 %setup -qn pyxmpp-%{version}
