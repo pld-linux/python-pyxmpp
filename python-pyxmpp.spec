@@ -17,7 +17,7 @@ Requires:	python-libxml2 >= 2.6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This package provides a Python inteface to XMPP and Jabber protocols.
+This package provides a Python interface to XMPP and Jabber protocols.
 
 %description -l pl
 Ten pakiet udostêpnia interfejs Pythona do protoko³ów XMPP i Jabber.
