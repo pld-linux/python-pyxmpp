@@ -10,7 +10,7 @@ Source0:	http://pyxmpp.jabberstudio.org/snapshots/pyxmpp-%{version}.tar.gz
 # Source0-md5:	26f1f709b5b52a711cd3cbb8c791d8ee
 URL:		http://pyxmpp.jabberstudio.org/
 BuildRequires:	libxml2-devel >= 2.6.0
-BuildRequires:	python-devel >= 2.3.0
+BuildRequires:	python-devel >= 1:2.3.0
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Requires:	python-libxml2 >= 2.6.0
