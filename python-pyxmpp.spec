@@ -12,7 +12,6 @@ Source0:	http://www.jajcus.net/files/pyxmpp-%{version}.tar.gz
 URL:		http://pyxmpp.jabberstudio.org/
 BuildRequires:	libxml2-devel >= 2.6.0
 BuildRequires:	python-devel >= 1:2.3.0
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Requires:	python-dns
 Requires:	python-libxml2 >= 2.6.0
