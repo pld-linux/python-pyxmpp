@@ -27,9 +27,6 @@ python setup.py build
 %install
 rm -rf $RPM_BUILD_ROOT
 
-PYTHONPATH=$RPM_BUILD_ROOT%{py_sitedir}
-export PYTHONPATH
-
 python setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT%{py_sitedir} -name "*.py" | xargs rm
 
