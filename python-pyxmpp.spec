@@ -8,7 +8,7 @@ Group:		Libraries/Python
 #Source0:	http://www.jabberstudio.org/files/pyxmpp/pyxmpp-%{version}.tar.gz
 #Source0:	http://pyxmpp.jabberstudio.org/snapshots/pyxmpp-%{version}.tar.gz
 Source0:	http://www.jajcus.net/files/pyxmpp-%{version}.tar.gz
-# Source0-md5:	5ff887605ddac138631e46cf30f696d7
+# Source0-md5:	dc562adb97a85ab89ca730cf8db73985
 URL:		http://pyxmpp.jabberstudio.org/
 BuildRequires:	libxml2-devel >= 2.6.0
 BuildRequires:	python-devel >= 1:2.3.0
