@@ -1,5 +1,5 @@
 Summary:	Jabber/XMPP package for Python
-Summary(pl):	Biblioteka Jabber/XMPP dla Pythona
+Summary(pl.UTF-8):   Biblioteka Jabber/XMPP dla Pythona
 Name:		python-pyxmpp
 Version:	1.0.0
 Release:	3
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This package provides a Python interface to XMPP and Jabber protocols.
 
-%description -l pl
-Ten pakiet udostêpnia interfejs Pythona do protoko³ów XMPP i Jabber.
+%description -l pl.UTF-8
+Ten pakiet udostÄ™pnia interfejs Pythona do protokoÅ‚Ã³w XMPP i Jabber.
 
 %prep
 %setup -qn pyxmpp-%{version}
