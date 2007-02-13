@@ -1,5 +1,5 @@
 Summary:	Jabber/XMPP package for Python
-Summary(pl.UTF-8):   Biblioteka Jabber/XMPP dla Pythona
+Summary(pl.UTF-8):	Biblioteka Jabber/XMPP dla Pythona
 Name:		python-pyxmpp
 Version:	1.0.0
 Release:	3
