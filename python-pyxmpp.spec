@@ -1,14 +1,14 @@
 Summary:	Jabber/XMPP package for Python
 Summary(pl.UTF-8):	Biblioteka Jabber/XMPP dla Pythona
 Name:		python-pyxmpp
+%define	snap	20070204
 Version:	1.0.0
-Release:	3
+Release:	4.%{snap}.1
 License:	LGPL
 Group:		Libraries/Python
-Source0:	http://files.jabberstudio.org/pyxmpp/pyxmpp-%{version}.tar.gz
-# Source0-md5:	02700da5a2f36b57916e9da200d2c14f
-Patch0:		%{name}-m2crypto.patch
-URL:		http://pyxmpp.jabberstudio.org/
+Source0:	http://pyxmpp.jajcus.net/downloads/snapshots/pyxmpp-%{version}.s%{snap}.tar.gz
+# Source0-md5:	5cd46c0008dd662acd6f7fb2c22313ea
+URL:		http://pyxmpp.jajcus.net/
 BuildRequires:	libxml2-devel >= 2.6.19
 BuildRequires:	python-devel >= 1:2.5
 %pyrequires_eq	python-modules
@@ -24,8 +24,7 @@ This package provides a Python interface to XMPP and Jabber protocols.
 Ten pakiet udostępnia interfejs Pythona do protokołów XMPP i Jabber.
 
 %prep
-%setup -qn pyxmpp-%{version}
-%patch0 -p1
+%setup -qn pyxmpp-%{version}.s%{snap}
 
 %build
 export CFLAGS="%{rpmcflags}"
