@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Biblioteka Jabber/XMPP dla Pythona
 Name:		python-pyxmpp
 %define	snap	20080822
 Version:	1.0.0
-Release:	4.%{snap}.1
+Release:	4.%{snap}.2
 License:	LGPL
 Group:		Libraries/Python
 Source0:	http://pyxmpp.jajcus.net/downloads/snapshots/pyxmpp-%{version}.s%{snap}.tar.gz
