@@ -1,0 +1,25 @@
+commit 43e00488a1b7845da37702235c37f692e4f28829
+Author: Jacek Konieczny <jajcus@jajcus.net>
+Date:   Tue Aug 23 09:58:02 2011 +0200
+
+    Workaround for OpenFire <bind/> reply bug
+    
+    closes #27
+
+diff --git a/pyxmpp/stanzaprocessor.py b/pyxmpp/stanzaprocessor.py
+index 4192307..7a052ff 100644
+--- a/pyxmpp/stanzaprocessor.py
++++ b/pyxmpp/stanzaprocessor.py
+@@ -264,6 +264,12 @@ class StanzaProcessor:
+         self.fix_in_stanza(stanza)
+         to=stanza.get_to()
+ 
++        if to and to.node == None and (not self.me
++                                        or to.domain == self.me.domain):
++            # workaround for OpenFire bug
++            # http://community.igniterealtime.org/thread/35966
++            to = None
++
+         if not self.process_all_stanzas and to and to!=self.me and to.bare()!=self.me.bare():
+             return self.route_stanza(stanza)
+ 
