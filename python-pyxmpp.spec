@@ -29,13 +29,12 @@ Ten pakiet udostępnia interfejs Pythona do protokołów XMPP i Jabber.
 %patch0 -p1
 
 %build
-export CFLAGS="%{rpmcflags}"
-python setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-python setup.py install --optimize=2 --root=$RPM_BUILD_ROOT
+%py_install
 find $RPM_BUILD_ROOT%{py_sitedir} -name "*.py" | xargs rm
 
 %clean
