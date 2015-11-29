@@ -9,6 +9,7 @@ Source0:	http://cloud.github.com/downloads/Jajcus/pyxmpp/pyxmpp-%{version}.tar.g
 # Source0-md5:	a38abf032aca0408b6055cd94296eb75
 Patch0:		%{name}-openfire_bug.patch
 URL:		http://pyxmpp.jajcus.net/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	libxml2-devel >= 2.6.19
 BuildRequires:	python-devel >= 1:2.6
 BuildRequires:	python-modules
