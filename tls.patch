@@ -1,0 +1,11 @@
+--- pyxmpp-1.1.2/pyxmpp/streamtls.py~	2011-05-08 12:59:58.000000000 +0200
++++ pyxmpp-1.1.2/pyxmpp/streamtls.py	2022-05-26 10:12:46.669970986 +0200
+@@ -310,7 +310,7 @@ class StreamTLSMixIn:
+                     certfile = self.tls_settings.cert_file,
+                     server_side = not self.initiator,
+                     cert_reqs = cert_reqs,
+-                    ssl_version = ssl.PROTOCOL_TLSv1,
++                    ssl_version = ssl.PROTOCOL_TLS,
+                     ca_certs = self.tls_settings.cacert_file,
+                     do_handshake_on_connect = False,
+                     )
