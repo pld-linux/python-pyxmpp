@@ -5,20 +5,20 @@ Version:	1.1.2
 Release:	6
 License:	LGPL
 Group:		Libraries/Python
-Source0:	http://cloud.github.com/downloads/Jajcus/pyxmpp/pyxmpp-%{version}.tar.gz
+Source0:	https://files.pythonhosted.org/packages/source/p/pyxmpp/pyxmpp-%{version}.tar.gz
 # Source0-md5:	a38abf032aca0408b6055cd94296eb75
 Patch0:		%{name}-openfire_bug.patch
 Patch1:		%{name}-xep-0203.patch
 Patch2:		tls.patch
-URL:		http://pyxmpp.jajcus.net/
-BuildRequires:	rpmbuild(macros) >= 1.710
+URL:		https://pypi.org/project/pyxmpp/
 BuildRequires:	libxml2-devel >= 2.6.19
 BuildRequires:	python-devel >= 1:2.6
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
-%pyrequires_eq	python-modules
+BuildRequires:	rpmbuild(macros) >= 1.714
 Requires:	python-dns
 Requires:	python-libxml2 >= 2.6.19
+Requires:	python-modules >= 1:2.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -40,7 +40,8 @@ Ten pakiet udostępnia interfejs Pythona do protokołów XMPP i Jabber.
 rm -rf $RPM_BUILD_ROOT
 
 %py_install
-find $RPM_BUILD_ROOT%{py_sitedir} -name "*.py" | xargs rm
+
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -54,4 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitedir}/pyxmpp/jabber
 %{py_sitedir}/pyxmpp/jabberd
 %{py_sitedir}/pyxmpp/sasl
-%{py_sitedir}/pyxmpp-*.egg-info
+%{py_sitedir}/pyxmpp-%{version}-py*.egg-info
